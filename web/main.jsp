@@ -7,7 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page import="servlet.testcode" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.List" %>
 <html>
@@ -33,7 +32,7 @@
     var message = null;
     //判断当前浏览器是否支持WebSocket
     if ('WebSocket' in window) {
-        websocket = new WebSocket("ws://localhost:8080/websocket");
+        websocket = new WebSocket("ws://localhost:8080"+"${pageContext.request.contextPath}/websocket");
     }
     else {
         alert('Not support websocket')
@@ -90,7 +89,7 @@
 
     //------------------------------------------------------------------------------------
     var myChart = echarts.init(document.getElementById('main'));
-    var data = [123,234,456,231,123,234,456,231,123,234,456,231,123,234,456,231,123,234,456,231,123,234,456,231,123,234,456,231,123,234,456,231,123,234,456,231,123,234,456,231,123,234,456,231,123,234,456,231];
+    var data = [500,500,500,500,500,500,500,500,500];  //默认数据
     function addData() {
         send();
     }
