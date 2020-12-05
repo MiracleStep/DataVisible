@@ -25,8 +25,9 @@
 </head>
 <body>
 <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-<div id="main" style="width: 600px;height:400px;"></div>
-<div id="message"></div>
+<div id="main" style="width: 600px;height:400px; margin: 0 auto;"></div>
+<div id="message" style="width: max-content;height: 800px;margin: 0 auto;"></div>
+<a href="http://beian.miit.gov.cn" style="display: inline-block;margin: 0 auto;">鲁ICP备2020046417号-1</a>
 <script type="text/javascript">
     var websocket = null;
     var message = null;
