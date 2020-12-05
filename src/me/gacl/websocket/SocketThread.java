@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class SocketThread extends Thread{
     private Socket socket;
-    public static ArrayList<String> arrayList = null;
+
 
     public SocketThread(Socket socket)
     {
@@ -20,8 +20,7 @@ public class SocketThread extends Thread{
         try {
             inputStream = socket.getInputStream();
             byte[] b = new  byte[1024];
-
-            arrayList = new ArrayList<>();
+            
             while (true){
                 int len = inputStream.read(b);
                 String str = "";
@@ -31,7 +30,7 @@ public class SocketThread extends Thread{
                 String rpstr = str.replace(" ", ",");
                 String[] split = rpstr.split(",");
                 for (int i=0;i<split.length;i++){
-                    arrayList.add(split[i]);
+                    MyThread.arrayList.add(split[i]);
                     System.out.println("数据库添加了数据"+split[i]);
                 }
                 if (socket.isClosed()){

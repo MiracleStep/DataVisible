@@ -12,7 +12,7 @@ public class MyThread extends Thread{
     public MyThread() {
     }
 
-
+    public static ArrayList<String> arrayList = new ArrayList<>();
     @Override
     public void run() {
         ServerSocket serverSocket = null;

@@ -7,7 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page import="servlet.testcode" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.List" %>
 <html>
@@ -25,7 +24,7 @@
     <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
 </head>
 <body>
-<%--<!-- 为ECharts准备一个具备大小（宽高）的Dom -->--%>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
 <div id="main" style="width: 600px;height:400px;"></div>
 <div id="message"></div>
 <script type="text/javascript">
@@ -90,7 +89,7 @@
 
     //------------------------------------------------------------------------------------
     var myChart = echarts.init(document.getElementById('main'));
-    var data = [123,234,456,231,123,234,456,231,123,234,456,231,123,234,456,231,123,234,456,231,123,234,456,231,123,234,456,231,123,234,456,231,123,234,456,231,123,234,456,231,123,234,456,231,123,234,456,231];
+    var data = [500,500,500,500,500,500,500,500,500];  //默认数据
     function addData() {
         send();
     }

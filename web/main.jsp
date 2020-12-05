@@ -24,7 +24,7 @@
     <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
 </head>
 <body>
-<%--<!-- 为ECharts准备一个具备大小（宽高）的Dom -->--%>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
 <div id="main" style="width: 600px;height:400px;"></div>
 <div id="message"></div>
 <script type="text/javascript">

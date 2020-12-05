@@ -52,12 +52,12 @@ public class WebSocketTest {
     @OnMessage
     public void onMessage(String message, Session session) throws IOException {
         System.out.println("上次发送的数据:" + message);
-        System.out.println("数据库数据量："+SocketThread.arrayList.size()+"---数据："+SocketThread.arrayList);
-        if (!SocketThread.arrayList.isEmpty()){
-            String str = SocketThread.arrayList.get(SocketThread.arrayList.size() - 1);
-            SocketThread.arrayList.remove(SocketThread.arrayList.size()-1);
+        System.out.println("数据库数据量："+MyThread.arrayList.size()+"    数据："+MyThread.arrayList);
+        if (!MyThread.arrayList.isEmpty()){
+            String str = MyThread.arrayList.get(MyThread.arrayList.size() - 1);
+            MyThread.arrayList.remove(MyThread.arrayList.size()-1);
             this.sendMessage(str);
-            System.out.println("已发送,当前待发送数据量:"+SocketThread.arrayList.size()+"---数据："+SocketThread.arrayList);
+            System.out.println("已发送,当前待发送数据量:"+MyThread.arrayList.size()+"    数据："+MyThread.arrayList);
         }
     }
 
